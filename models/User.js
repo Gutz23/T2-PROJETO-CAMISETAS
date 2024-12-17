@@ -24,12 +24,6 @@ const User = sequelize.define('User', {
     senha: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            is: {
-                args: [/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,20}$/],
-                msg: "A senha deve ter pelo menos uma letra, um número, um caractere especial e entre 6 a 20 caracteres.",
-            },
-        },
     }
 }, {
     tableName: 'User',
