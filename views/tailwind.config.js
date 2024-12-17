@@ -4,5 +4,10 @@ module.exports = {
         theme: {
             extend: {},
         },
+        variants: {
+            extend: {
+            placeholderOpacity: ['responsive', 'focus'], // Habilitar variantes se necessário
+            },
+        },
     plugins: [],
 };

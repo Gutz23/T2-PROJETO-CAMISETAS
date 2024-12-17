@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body class="bg-[#111111]">
     <section class="p-10">
-        <h1 class="text-lg text-center text-slate-50">LOGIN</h1>
+        <h1 class="text-lg text-center text-slate-50">CADASTRO</h1>
         <form action="/login" method="POST">
+            <div class="flex justify-center content-center">
+                <input type="text" id="firstName" name="firstName" class="my-2 bg-[#111111] w-96 p-1 border border-gray-300 rounded-2xl placeholder:opacity-50 placeholder:p-2" placeholder="Nome" required>
+            </div>
+            <div class="flex justify-center content-center">
+                <input type="text" id="secondName" name="secondName" class="my-2 bg-[#111111] w-96 p-1 border border-gray-300 rounded-2xl placeholder:opacity-50 placeholder:p-2" placeholder="Sobrenome" required>
+            </div>
             <div class="flex justify-center content-center">
                 <input type="email" id="email" name="email" class="my-2 bg-[#111111] w-96 p-1 border border-gray-300 rounded-2xl placeholder:opacity-50 placeholder:p-2" placeholder="E-mail" required>
             </div>
