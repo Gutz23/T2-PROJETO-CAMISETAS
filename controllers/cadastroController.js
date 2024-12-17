@@ -1,8 +1,6 @@
-import { error } from "console";
-import User from "../models/User"
-import sequelize from "sequelize"
-
-const User = require("../models/User");
+const { error } = require("console");
+const user = require("../models/User.js");
+const { Sequelize } = require("sequelize");
 
 const cadastrarUser = async (req, res) => {
     try {
@@ -24,4 +22,4 @@ const cadastrarUser = async (req, res) => {
     }
 };
 
-export default cadastrarUser;
+module.exports = { cadastrarUser };

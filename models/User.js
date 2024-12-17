@@ -1,6 +1,5 @@
-import {DataTypes} from 'sequelize';
-import sequelize from '../config/database.js';
-import { type } from 'os';
+const { DataTypes } = require("sequelize");
+const sequelize = require("../config/database.js")
 
 const User = sequelize.define('User', {
     codigo: {
@@ -37,4 +36,4 @@ const User = sequelize.define('User', {
     timestamps: true,
 });
 
-export default User;
+module.exports = User;
