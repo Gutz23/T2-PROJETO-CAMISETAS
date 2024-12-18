@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database.js")
 
-const User = sequelize.define('User', {
+const Camisetas = sequelize.define('Camisetas', {
     codigo: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -11,23 +11,21 @@ const User = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    email: {
+    descricao: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+    },
+    tamanho: {
         type: DataTypes.STRING,
         allowNull: false,
-        unique: true,
-        validate: {
-            isEmail: {
-                msg: "Por favor, insira um e-mail válido.",
-            },
-        },
     },
-    senha: {
+    endereco_camiseta: {
         type: DataTypes.STRING,
         allowNull: false,
     }
 }, {
-    tableName: 'User',
+    tableName: 'Camisetas',
     timestamps: true,
 });
 
-module.exports = User;
+module.exports = Camisetas;

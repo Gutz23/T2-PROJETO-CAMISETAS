@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cadastro</title>
+</head>
+<body class="bg-[#111111]">
+    <section class="p-10">
+        <h1 class="text-lg text-center text-slate-50">CADASTRO</h1>
+        <form id="formCadastro" action="/cadastro" method="POST">
+            <div class="flex justify-center content-center">
+                <input type="text" id="nome" name="nome" class="my-2 bg-[#111111] text-white w-96 p-1 px-4 border border-gray-300 rounded-2xl placeholder:opacity-50" placeholder="Nome" required>
+            </div>
+            <div class="flex justify-center content-center">
+                <input type="email" id="email" name="email" class="my-2 bg-[#111111] text-white w-96 p-1 px-4 border border-gray-300 rounded-2xl placeholder:opacity-50" placeholder="E-mail" required>
+            </div>
+            <div class="flex justify-center content-center">
+                <input type="password" id="senha" name="senha" class="my-2 bg-[#111111] text-white w-96 p-1 px-4 border border-gray-300 rounded-2xl placeholder:opacity-50" placeholder="Senha" required pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,20}$"
+                title="A senha deve ter pelo menos uma letra, um número, um caractere especial e entre 6 a 20 caracteres.">
+            </div>
+            <div class="flex justify-center content-center">
+                <button type="submit" class="bg-[#c4c4c4] p-2 px-10 rounded-md">Cadastrar</button>
+            </div>
+            </form>
+        </section>
+        <script src="../models/confirmarSenha.js"></script>
+    </body>
+    </html>
