@@ -8,9 +8,15 @@
     <title>Login</title>
 </head>
 <body class=>
-    <div class="min-h-screen bg-white text-gray-900 flex justify-center">
+    <div class="min-h-screen bg-gray-50 text-gray-900 flex justify-center">
         <div class="max-w-screen-xl m-0 sm:m-10 bg-[#F4E9E4] shadow sm:rounded-lg flex justify-center flex-1">
             <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+                <button type="button" class="text-white bg-orange-700 hover:bg-orange-500 focus:ring-4 transition-all duration-300 ease-in-out focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>                     
+                    <span class="sr-only">Voltar para a home</span>
+                </button>
                 <div>
                     <img src="/public/images/logo.png"
                         class="w-32 mx-auto" />
@@ -28,7 +34,7 @@
                             class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                             type="password" placeholder="Senha" />
                         <button
-                            class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                            class="mt-5 tracking-wide font-semibold bg-orange-700 text-gray-100 w-full py-4 rounded-lg hover:bg-orange-500 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                             <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -41,43 +47,35 @@
                         </button>
                         <div class="my-12 border-b text-center">
                             <div
-                                class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium  transform translate-y-1/2">
-                                Ou crie um cadastro com o email
+                                class="leading-none px-2 inline-block text-sm text-black tracking-wide font-medium  transform translate-y-1/2">
+                                Ou crie um cadastro 
                             </div>
                         </div>
-    
+                        
                         <div class="mx-auto max-w-xs">
-                            <input
-                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                type="email" placeholder="Nome Completo" />  
-                            <input
-                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                type="email" placeholder="Email" />
-                            <input
-                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                type="password" placeholder="Password" />  
-                            <button
-                                class="mt-5 tracking-wide font-semibold bg-orange-700 text-gray-100 w-full py-4 rounded-lg hover:bg-orange-500 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                                <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                                    <circle cx="8.5" cy="7" r="4" />
-                                    <path d="M20 8v6M23 11h-6" />
-                                </svg>
-                                <span class="ml-3">
-                                    Inscrever-se
-                                </span>
-                            </button>
-                            <p class="mt-6 text-xs text-gray-600 text-center">
-                                I agree to abide by templatana's
-                                <a href="#" class="border-b border-gray-500 border-dotted">
-                                    Terms of Service
-                                </a>
-                                and its
-                                <a href="#" class="border-b border-gray-500 border-dotted">
-                                    Privacy Policy
-                                </a>
-                            </p>
+                            <form>   
+                                <input
+                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                    type="text" placeholder="Nome Completo" />  
+                                <input
+                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                                    type="email" placeholder="Email" />
+                                <input
+                                    class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                                    type="password" placeholder="Password" />  
+                                <button
+                                    class="mt-5 tracking-wide font-semibold bg-orange-500 text-gray-100 w-full py-4 rounded-lg hover:bg-orange-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                    <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                        <circle cx="8.5" cy="7" r="4" />
+                                        <path d="M20 8v6M23 11h-6" />
+                                    </svg>
+                                    <span class="ml-3">
+                                        Inscrever-se
+                                    </span>
+                                </button>
+                            </form> 
                         </div>
                     </div>
                 </div>
