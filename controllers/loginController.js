@@ -6,14 +6,15 @@ const login = async (req, res) => {
     const { email, senha } = req.body;
 
     try {
-        const user = await User.findOne({ where: { email } });
+        const foundUser = await user.findOne({ where: { email } });
 
-        if (!user) {
+        if (!foundUser) {
             return res.status(404).json({ error: 'Usuário não encontrado!' });
         }
-        if (user.senha !== senha) { 
+        if (foundUser.senha !== senha) { 
             return res.status(401).json({ error: 'Senha incorreta!' });
         }
+        res.redirect("/home")
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Erro no servidor!' });

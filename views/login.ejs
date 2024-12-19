@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
-</head>
+<%- include ('partials/header.ejs')%>
 <body class=>
     <div class="min-h-screen bg-gray-50 text-gray-900 flex justify-center">
         <div class="max-w-screen-xl m-0 sm:m-10 bg-[#F4E9E4] shadow sm:rounded-lg flex justify-center flex-1">
@@ -18,7 +10,7 @@
                     <span class="sr-only">Voltar para a home</span>
                 </button>
                 <div>
-                    <img src="/public/images/logo.png"
+                    <img src="/images/logo.png"
                         class="w-32 mx-auto" />
                 </div>
                 <div class="mt-12 flex flex-col items-center">
@@ -27,24 +19,26 @@
                     </h1>
                     
                     <div class="mx-auto max-w-xs">
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                            type="email" placeholder="Email" />
-                        <input
-                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="password" placeholder="Senha" />
-                        <button
-                            class="mt-5 tracking-wide font-semibold bg-orange-700 text-gray-100 w-full py-4 rounded-lg hover:bg-orange-500 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                            <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                                <circle cx="8.5" cy="7" r="4" />
-                                <path d="M20 8v6M23 11h-6" />
-                            </svg>
-                            <span class="ml-3">
-                                Entrar
-                            </span>
-                        </button>
+                        <form action="/login" method="POST">
+                            <input
+                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                                type="email" name="email" placeholder="Email" />
+                            <input
+                                class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                                type="password" name="senha" placeholder="Senha" />
+                            <button
+                                type="submit" class="mt-5 tracking-wide font-semibold bg-orange-700 text-gray-100 w-full py-4 rounded-lg hover:bg-orange-500 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="8.5" cy="7" r="4" />
+                                    <path d="M20 8v6M23 11h-6" />
+                                </svg>
+                                <span class="ml-3">
+                                    Entrar
+                                </span>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

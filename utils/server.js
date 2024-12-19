@@ -7,7 +7,7 @@ const homeRoutes = require('../routes/HomeRoute.js')
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/js', express.static('node_modules/flowbite/dist'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 app.use("", loginRoutes, cadastroRoutes, homeRoutes);
 
