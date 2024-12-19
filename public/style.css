@@ -4,12 +4,3 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
-#sidebarMenu {
-    z-index: 1000;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#sidebarMenu.open {
-    transform: translateX(0);
-}
